@@ -1,0 +1,25 @@
+<h1 class="text-center"> Lighting </h1>
+<div class="col-xs-12 well">
+    <div class="col-xs-4">
+        <h3>Turn On/Off</h3>
+        <a class="btn btn-success" ng-click="l.lightsOn()">Lights On</a>
+        <a class="btn btn-danger" ng-click="l.lightsOff()">Lights Off</a>
+    </div>
+    <div class="col-xs-4">
+        <h3>Color</h3>
+        <form>
+            <select class="btn btn-warning" ng-model="selected" ng-options="color for color in colors">
+        </form>
+    </div>
+    <div class="col-xs-4">
+        <h3>Fade</h3>
+        <form>
+            <select ng-model="selected" ng-options="color for color in colors">
+            <div class="btn-group" data-toggle="buttons">
+                <label class="checkbox-inline btn btn-primary">
+                    <input type="checkbox" ng-model="fade">Fade
+                </label>
+            </div>
+        </form>
+    </div>
+</div>
