@@ -7,21 +7,24 @@
             <a class="pure-menu-heading" href="">Home Control</a>
             <ul class="pure-menu-list">
                 <li class="pure-menu-item">
-                    <a class="pure-menu-link" href="#/">Home</a>
+                    <a class="pure-menu-link" ng-click="setPath('home')" href="#/home">Home</a>
                 </li>
                 <li class="pure-menu-item">
-                    <a class="pure-menu-link" href="#/lighting">Lighting</a>
+                    <a class="pure-menu-link" ng-click="setPath('lighting')" href="#/lighting">Lighting</a>
                 </li>
                 <li class="pure-menu-item">
-                    <a class="pure-menu-link" href="#/about">About</a>
+                    <a class="pure-menu-link" ng-click="setPath('about')" href="#/about">About</a>
                 </li>
                 <li class="pure-menu-item">
-                    <a class="pure-menu-link" href="#/contact">Contact</a>
+                    <a class="pure-menu-link" ng-click="setPath('contact')" href="#/contact">Contact</a>
                 </li>
             </ul>
         </div>
     </div>
     <div id="main" class="container">
+        <div class="header">
+            <h1>{{ title | uppercase }}</h1>
+        </div>
         <ng-transclude></ng-transclude>
     </div>
 </div>

@@ -1,6 +1,8 @@
 angular.module('homeControlFrontendApp')
-    .controller('AboutCtrl', [
+    .controller('ContactCtrl', [
         '$scope',
         function ($scope) {
             'use strict';
-        }]);
+
+        }
+    ]);
