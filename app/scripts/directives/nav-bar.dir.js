@@ -9,15 +9,11 @@ angular.module('homeControlFrontendApp')
                 templateUrl: 'views/nav-bar.html',
                 transclude: true,
                 link: function (scope, elems, attrs) {
-
                     scope.active = false;
-
                     scope.title = $location.path();
-
                     scope.setPath = function (path) {
                         scope.title = path;
                     };
-
                 }
             }
         }

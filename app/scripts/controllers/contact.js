@@ -3,6 +3,5 @@ angular.module('homeControlFrontendApp')
         '$scope',
         function ($scope) {
             'use strict';
-
         }
     ]);

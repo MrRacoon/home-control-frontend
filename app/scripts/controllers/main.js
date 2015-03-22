@@ -8,4 +8,5 @@ angular.module('homeControlFrontendApp')
                 'AngularJS',
                 'Karma'
             ];
-        }]);
+        }
+    ]);

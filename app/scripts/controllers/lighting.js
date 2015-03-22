@@ -10,20 +10,14 @@ angular.module('homeControlFrontendApp')
         '$scope',
         'lifx',
         function ($scope, lifx) {
-
             'use strict';
-
             $scope.fade = false;
-
-
             $scope.lightsOn = function () {
                 lifx.lightsOn();
             };
-
             $scope.lightsOff = function () {
                 lifx.lightsOff();
             };
-
             $scope.colors = [
                 'red',
                 'orange',
@@ -36,16 +30,14 @@ angular.module('homeControlFrontendApp')
                 'pink',
                 'darkPink'
             ];
-
             $scope.selected = $scope.colors[0];
-
             $scope.$watch('selected', function (newColor) {
-                if (newColor) {
-                    if ($scope.fade) {
-                        lifx.colorFade(newColor);
-                    } else {
-                        lifx.color(newColor);
-                    }
+                if (!newColor) return;
+                if ($scope.fade) {
+                    lifx.colorFade(newColor);
+                } else {
+                    lifx.color(newColor);
                 }
             });
-    }]);
+        }
+    ]);
