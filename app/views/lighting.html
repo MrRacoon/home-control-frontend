@@ -1,25 +1,30 @@
-<h1 class="text-center"> Lighting </h1>
 <div class="pure-g">
-    <div class="pure-u-1-1">
-        <h3>Turn On/Off</h3>
-        <a class="btn btn-success" ng-click="lightsOn()">Lights On</a>
-        <a class="btn btn-danger" ng-click="lightsOff()">Lights Off</a>
-    </div>
-    <div class="pure-u-1-2">
-        <h3>Color</h3>
-        <form>
-            <select class="btn btn-warning" ng-model="selected" ng-options="color for color in colors"></select>
-        </form>
-    </div>
-    <div class="pure-u-1-2">
-        <h3>Fade</h3>
-        <form class="pure-form">
-            <select ng-model="selected" ng-options="color for color in colors"></select>
-            <div class="btn-group" data-toggle="buttons">
-                <label class="checkbox-inline btn btn-primary">
-                    <input type="checkbox" ng-model="fade">Fade
+    <!-- Power -->
+    <section>
+        <section class="pure-u-1-2 text-center"><h3>Power</h3></section>
+        <section class="pure-u-1-2 well text-center">
+            <a class="pure-button pure-button-primary" ng-click="lightsOn()"><i class="fa fa-power-on"></i></a>
+            <a class="pure-button pure-button-primary" ng-click="lightsOff()"><i class="fa fa-power-off"></i></a>
+        </section>
+    </section>
+    <!-- Power -->
+    <section>
+        <section class="pure-u-1-2 text-center"><h3>Color</h3></section>
+        <section class="pure-u-1-2 well text-center">
+            <form>
+                <select class="pure-button pure-button-primary" ng-model="selectedColor" ng-options="color for color in colors"></select>
+            </form>
+        </section>
+    </section>
+    <!-- Power -->
+    <section>
+        <section class="pure-u-1-2 text-center"><h3>Fade</h3></section>
+        <section class="pure-u-1-2 well text-center">
+            <form class="pure-form">
+                <label for="fade" class="pure-checkbox">
+                    <input type="checkbox" ng-model="fade">
                 </label>
-            </div>
-        </form>
-    </div>
+            </form>
+        </section>
+    </section>
 </div>

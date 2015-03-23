@@ -31,13 +31,14 @@ angular.module('homeControlFrontendApp')
                 'darkPink'
             ];
             $scope.selected = $scope.colors[0];
-            $scope.$watch('selected', function (newColor) {
+            $scope.$watch('selectedColor', function (newColor) {
                 if (!newColor) return;
                 if ($scope.fade) {
                     lifx.colorFade(newColor);
                 } else {
                     lifx.color(newColor);
                 }
+
             });
         }
     ]);

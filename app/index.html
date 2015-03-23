@@ -23,23 +23,11 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- The Menu bar -->
-
-    <nav-bar>
-        <div class="header">
-
-        </div>
-        <div class="content">
-            <div ng-view=""></div>
-        </div>
-    </nav-bar>
-
-
-    <div class="footer">
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
-    </div>
+    <!-- App Shell + Menu -->
+    <app-shell>
+        <!-- Our AngularJS driven View -->
+        <div ng-view=""></div>
+    </app-shell>
 
 
     <!-- build:js(.) scripts/vendor.js -->
@@ -49,6 +37,7 @@
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/lodash/lodash.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -56,7 +45,7 @@
     <script src="scripts/app.js"></script>
     <script src="scripts/const/settings.js"></script>
     <script src="scripts/services/lifx.js"></script>
-    <script src="scripts/directives/nav-bar.dir.js"></script>
+    <script src="scripts/directives/app-shell.dir.js"></script>
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/controllers/lighting.js"></script>
     <script src="scripts/controllers/about.js"></script>
