@@ -10,10 +10,31 @@ angular.module('homeControlFrontendApp')
                 transclude: true,
                 link: function (scope, elems, attrs) {
                     scope.active = false;
-                    scope.title = $location.path();
-                    scope.setPath = function (path) {
-                        scope.title = path;
-                    };
+                    scope.pageTitle = '';
+                    scope.menuItems = [
+                        {
+                            title: 'Home',
+                            location: '/home',
+                            icon: 'home'
+                        },
+                        {
+                            title: 'Lighting',
+                            location: '/lighting',
+                            icon: 'lightbulb-o'
+                        },
+                        {
+                            title: 'About',
+                            location: '/about',
+                            icon: 'at'
+                        },
+                        {
+                            title: 'Contact',
+                            location: '/contact',
+                            icon: 'phone'
+                        }
+                    ]
+
+
                 }
             }
         }

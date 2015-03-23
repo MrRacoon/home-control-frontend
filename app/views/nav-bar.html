@@ -1,29 +1,20 @@
 <div id="layout" ng-class="{'active': active}">
     <a id="menuLink" class="menu-link" ng-class="{'active': active}" ng-click="active = !active" href="#menu">
-        <span class="glyphicon glyphicon-ok-circle"></span>
+        <i class="fa fa-gear fa-3x"></i>
     </a>
     <div id="menu" ng-class="{'active': active}">
         <div class="pure-menu" k>
             <a class="pure-menu-heading" href="">Home Control</a>
             <ul class="pure-menu-list">
-                <li class="pure-menu-item">
-                    <a class="pure-menu-link" ng-click="setPath('home')" href="#/home">Home</a>
-                </li>
-                <li class="pure-menu-item">
-                    <a class="pure-menu-link" ng-click="setPath('lighting')" href="#/lighting">Lighting</a>
-                </li>
-                <li class="pure-menu-item">
-                    <a class="pure-menu-link" ng-click="setPath('about')" href="#/about">About</a>
-                </li>
-                <li class="pure-menu-item">
-                    <a class="pure-menu-link" ng-click="setPath('contact')" href="#/contact">Contact</a>
+                <li class="pure-menu-item" ng-repeat="item in menuItems">
+                    <a class="pure-menu-link" ng-click="pageTitle = item.title" ng-href="/#{{ item.location }}"><i ng-class="['fa', 'fa-' + item.icon]"></i> {{ item.title }}</a>
                 </li>
             </ul>
         </div>
     </div>
     <div id="main" class="container">
         <div class="header">
-            <h1>{{ title | uppercase }}</h1>
+            <h1>{{ pageTitle | uppercase }}</h1>
         </div>
         <ng-transclude></ng-transclude>
     </div>
